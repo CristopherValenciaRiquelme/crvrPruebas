@@ -1,0 +1,177 @@
+/* RESET DE ESTILOS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* VARIABLES */
+$color-marron-oscuro: #8B4513;
+$color-marron-claro: #A0522D;
+$color-marron-mas-claro: #D2691E;
+$color-gris-claro: #D2B48C;
+
+
+/* Estilos Globales */
+body {
+  text-align: center;
+  font-family: sans-serif;
+  height: auto;
+  width: 100%;
+}
+
+/* Estilos de las áreas de la página */
+header {
+  grid-area: header;
+  background-color: #8B4513;
+  
+  height: 10vh;
+  width: 100%; 
+
+    /* Utiliza flexbox para alinear el contenido */
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    white-space: nowrap;
+  
+   
+    font-size: 1.5rem;
+}
+
+/* Limita el ancho máximo de los elementos h1 y h2 */
+header h1, header h2 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+nav {
+  background-color: $color-marron-claro;
+  grid-area: nav;
+  height: 5vh; 
+  width: 100%; 
+}
+main {
+  background-color: $color-gris-claro;
+  grid-area: main;
+  height: 60vh;
+  
+}
+.primeraSeccion {
+  background-color: $color-marron-mas-claro;
+  grid-area: seccionA;
+  height: 15vh; 
+  
+}
+.segundaSeccion {
+  background-color: $color-marron-claro;
+  grid-area: seccionB;
+  height: 15vh; 
+  
+}
+
+aside.publicidadL {
+  background-color: $color-marron-oscuro;
+  grid-area: publiL;
+  height: 5vh;
+  
+}
+aside.publicidadR {
+  background-color: $color-marron-claro;
+  grid-area: publiR;
+  height: 5vh; 
+}
+
+footer {
+  background-color: $color-gris-claro;
+  grid-area: footer;
+  height: 5vh;
+  width: 100%; 
+
+}
+/* VERSION MÓVIL (Extra pequeño) */
+@media (min-width: 0px) and (max-width: 479px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "main main"
+      "seccionA seccionA"
+      "seccionB seccionB"
+      "publiL publiL"
+      "publiR publiR"
+      "footer footer";
+  }
+
+}
+
+/* VERSION MÓVIL */
+@media (min-width: 480px) and (max-width: 767px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header"
+      "nav"
+      "main"
+      "seccionA"
+      "seccionB"
+      "publiL"
+      "publiR"
+      "footer";
+  }
+
+}
+
+/* VERSION TABLETA */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header"
+      "nav nav"
+      "seccionA main"
+      "seccionB main"
+      "publiL publiR"
+      "footer footer";
+  }
+
+}
+/* VERSION PORTÁTIL */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "seccionA main seccionB"
+      "publiL main publiR"
+      "footer footer footer";
+  }
+}
+
+/* VERSION ESCRITORIO */
+@media (min-width: 1280px) {
+  .gridPadre {
+    display: grid;
+    grid-template-areas:
+      "header header header"
+      "nav nav nav"
+      "seccionA main seccionB"
+      "publiL main publiR"
+      "footer footer footer";
+  
+  }
+}
+
+
+/* También podemos configurar estilos dependiendo la orientacion de la pantalla */
+
+
+/*También podemos configurar estilos dependiendo la orientacion de la pantalla */
+
+@media screen and (orientation: landscape) {
+  /*Estilos en CSS para pantallas en modo horizontal */
+  h1,h2 {
+      text-transform: uppercase;
+  }
+}
