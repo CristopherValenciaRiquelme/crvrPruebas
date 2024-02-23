@@ -22,7 +22,21 @@ proyecto-web/
 7-GRIDS II
 8-PSEUDOCLASES Y BEM
 9.- FRAMEWORKS CSS + BOSSTRAP
-10-GIT
+10-GIT :
+        …or create a new repository on the command line:
+
+echo "# crvrPruebas" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/CristopherValenciaRiquelme/crvrPruebas.git
+git push -u origin main
+
+    …or push an existing repository from the command line:
+git remote add origin https://github.com/CristopherValenciaRiquelme/crvrPruebas.git
+git branch -M main
+git push -u origin main
 11-GITHUB
 12-SASS I
 13-SASS II
